@@ -2,10 +2,12 @@ import React from "react";
 import { FaStar, FaEye } from "react-icons/fa";
 import { CiShare2 } from "react-icons/ci";
 import { CiBookmark } from "react-icons/ci";
+import { Link } from "react-router";
 
 
 const NewsCard = ({ news }) => {
   const {
+    id,
     title,
     details,
     thumbnail_url,
@@ -64,9 +66,9 @@ const NewsCard = ({ news }) => {
             <span key={i}>#{t} </span>
           ))}
         </p>
-        <button className="text-orange-500 font-medium mt-1 hover:underline">
+        <Link to={`/news-details/${id}`} className="text-orange-500 font-medium mt-1 hover:underline">
           Read More
-        </button>
+        </Link>
       </div>
       <span className="border border-accent mx-4"></span>
       {/* Footer */}

@@ -12,7 +12,7 @@ const LatestNews = () => {
         setLatest(latestNews)
         return
     },[data])
-    console.log(latest)
+    
 
     
 
